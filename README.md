@@ -12,6 +12,25 @@ Fetures
 6. Background images
 7. Small footprint.
 
+Example
+----------------------------
+```javascript
+(function(){
+    var bookPages = [
+      { outlineImage: {path:'img/drawings/canvas-bg4.png'} }
+      ,{ outlineImage: {path:'img/drawings/canvas-bg2.png'} }
+      ,{ outlineImage: {path:'img/drawings/canvas-bg3.png'} }
+    ];
+
+    var app = new drawingApp({
+      pages: bookPages,
+      renderTo: '.book2',
+      canvasWidth: 900,
+      canvasHeight: 650
+    });
+})();
+```
+
 ----------------------------
 [Live demo](http://qualyapp.com/html5-canvas-drawing-book)
 

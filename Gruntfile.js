@@ -6,29 +6,22 @@ module.exports = function(grunt) {
     watch: {
       coffee: {
           files: ['src/*.coffee'],
-          tasks: ['concat','coffee']//,'uglify'
+          tasks: ['coffee', 'uglify']
         }
     },
     coffee: {
-      // options: {
-      //   bare: true
-      // },
+      options: {
+        join: true
+      },
       compile: {
         files: {
-          'js/drawingApp.js': ['src/concatenated.coffee']
+          'js/drawingApp.js': ['src/*.coffee']
         }
-      }
-    },
-    concat: {
-      dist: {
-        src: ['src/*.coffee'],
-        dest: 'src/concatenated.coffee'
       }
     },
     uglify: {
         my_target: {
           options: {
-            sourceMap: 'js/drawingApp.js',
             mangle: false
           },
           files: {
@@ -38,11 +31,10 @@ module.exports = function(grunt) {
       }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-coffee');
 
   // Default task.
-  grunt.registerTask('default', 'coffee');
+  grunt.registerTask('default', ['coffee', 'uglify']);
 };

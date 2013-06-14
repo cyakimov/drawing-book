@@ -69,7 +69,7 @@ class CanvasHandler
           @.mouseUpHandler = null
 
     updateMousePosition: (event) ->
-        target = if @touchSupported then event.targetTouches[0] else event  
+        target = if @touchSupported then event.targetTouches[0] else event
         offset = @canvas.offset()
         @lastMousePoint.x = target.pageX - offset.left
         @lastMousePoint.y = target.pageY - offset.top
@@ -105,7 +105,7 @@ class CanvasHandler
           @context.drawImage @brush, x, y
           z++
 
-    updateMousePosition: (event) ->          
+    updateMousePosition: (event) ->
       target = if @touchSupported then event.targetTouches[0] else event
       offset = @canvas.offset()
       @lastMousePoint.x = target.pageX - offset.left
