@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drawing HTML5</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JS -->
+  <script src="js/plugins.min.js"></script>
+  <script src="js/drawingApp.js"></script>  
+</head>
+<body>
+
+  <div class="drawing-book book2">
+    <div class="paginator">
+      <a href="#" class="js-left" disabled><img data-img-disabled="img/arrow-left-disabled.png" data-img-enabled="img/arrow-left.png" src="img/arrow-left-disabled.png"></a>
+      <a href="#" class="js-right"><img data-img-disabled="img/arrow-right-disabled.png" data-img-enabled="img/arrow-right.png" src="img/arrow-right.png"></a>
+    </div>
+    <div class="colors">
+      <a data-brush="img/brushes/brush-red.png" class="crayon active" href="#"><img src="img/crayons/crayon-red.png"></a>
+      <a data-brush="img/brushes/brush-orange.png" class="crayon" href="#"><img src="img/crayons/crayon-orange.png"></a>
+      <a data-brush="img/brushes/brush-yellow.png" class="crayon" href="#"><img src="img/crayons/crayon-yellow.png"></a>
+      <a data-brush="img/brushes/brush-green.png" class="crayon" href="#"><img src="img/crayons/crayon-green.png"></a>
+      <a data-brush="img/brushes/brush-blue.png" class="crayon" href="#"><img src="img/crayons/crayon-blue.png"></a>
+      <a data-brush="img/brushes/brush-purple.png" class="crayon" href="#"><img src="img/crayons/crayon-purple.png"></a>
+      <a data-brush="img/brushes/brush-brown.png" class="crayon" href="#"><img src="img/crayons/crayon-brown.png"></a>
+      <a data-brush="img/brushes/brush-white.png" class="crayon" href="#"><img src="img/crayons/crayon-white.png"></a>
+      <a class="crayon eraser" href="#"><img src="img/eraser.png"></a>
+      <a class="crayon reset" href="#">clear</a>
+    </div>
+  </div>  
+
+  <script>
+
+    (function(){
+
+        var bookPages = [
+          { outlineImage: {path:'img/drawings/canvas-bg4.png'} }
+          ,{ outlineImage: {path:'img/drawings/canvas-bg2.png'} }
+          ,{ outlineImage: {path:'img/drawings/canvas-bg3.png'} }
+        ];
+
+        var app = new drawingApp({
+          pages: bookPages,
+          renderTo: '.book2',
+          canvasWidth: 900,
+          canvasHeight: 650
+        });
+
+    })();    
+  </script>
+</body>
+</html>

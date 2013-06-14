@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drawing HTML5</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- JS -->
+  <script src="js/plugins.min.js"></script>
+  <script src="js/drawingApp.js"></script>  
+</head>
+<body>
+
+  <div class="drawing-book book2">
+    <div class="paginator">
+      <a href="#" class="js-left" disabled><img data-img-disabled="img/arrow-left-disabled.png" data-img-enabled="img/arrow-left.png" src="img/arrow-left-disabled.png"></a>
+      <a href="#" class="js-right"><img data-img-disabled="img/arrow-right-disabled.png" data-img-enabled="img/arrow-right.png" src="img/arrow-right.png"></a>
+    </div>
+    <div class="colors">
+      <a data-brush="img/brushes/brush-red.png" style="background: #cc0000;" class="color" href="#"></a>
+      <a data-brush="img/brushes/brush-orange.png" style="background: #ff9900;" class="color" href="#"></a>
+      <a data-brush="img/brushes/brush-yellow.png" style="background: #ffff00;" class="color" href="#"></a>
+      <a data-brush="img/brushes/brush-green.png" style="background: #339900;" class="color" href="#"></a>
+      <a data-brush="img/brushes/brush-blue.png" style="background: #33ccff;" class="color" href="#"></a>
+      <a data-brush="img/brushes/brush-purple.png" style="background: #9933cc;" class="color" href="#"></a>
+      <a data-brush="img/brushes/brush-brown.png" style="background: #663300;" class="color active" href="#"></a>
+      <a data-brush="img/brushes/brush-white.png" style="background: #ffffff;" class="color" href="#"></a>
+      <a class="crayon eraser" href="#"><img src="img/eraser.png"></a>
+      <a class="crayon reset" href="#">clear</a>
+    </div>
+  </div>  
+
+  <script>
+
+    (function(){
+      var bookPages = [
+        { outlineImage: {path:'img/drawings/canvas-bg4.png'} }
+        ,{ outlineImage: {path:'img/drawings/canvas-bg2.png'} }
+        ,{ outlineImage: {path:'img/drawings/canvas-bg3.png'} }
+      ];
+
+      var app = new drawingApp({
+        pages: bookPages,
+        renderTo: '.book2',
+        canvasWidth: 900,
+        canvasHeight: 650
+      });
+
+    })();    
+  </script>
+</body>
+</html>
