@@ -36,3 +36,7 @@ Example
 
 ----------------------------
 ![demo1](http://qualyapp.com/img/proyectos/drawing-book/ipad.png)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/cyakimov/drawing-book/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
